@@ -1,0 +1,5 @@
+__pycache__/
+lightning_logs/
+samples/
+tmp/
+search.py

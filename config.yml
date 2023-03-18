@@ -1,0 +1,39 @@
+model:
+    ema: True
+    ema_rate: 0.999
+    dropout: 0.0
+
+training:
+    batch_size: 128
+    precision: 16
+    max_epochs: 1000
+    max_steps: 800000
+    warmup_epochs: 1
+    accumulate_grad_batches: 4
+
+testing:
+    batch_size: 256
+    samples: 16
+    calc_inception: False
+
+data:
+    name: cifar10
+    num_workers: 4
+    img_resolution : 32
+    img_channels : 3
+
+optim:
+    grad_clip: null
+    weight_decay: 0
+    lr: 4.e-4
+    betas: [0.9,0.999]
+    eps: 1.e-8
+    amsgrad: False
+    optimizer : radam
+
+diffusion:
+    preconditioning: ct # vp | ve | edm
+    mu_0 : 0.9
+    s_0 : 2
+    s_1 : 150
+    ct_dist_fn : lpips # l1 | l2 | lpips
