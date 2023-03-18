@@ -48,9 +48,10 @@ Modify ```config.yml``` to change training parameters and loss functions.
 ![](contents/ct_cifar10_sample_1step.png)
 ## Todo
 
-- [x] Consistency Training
+- [x] Consistency Training (Discrete)
 - [x] LPIPS loss
 - [x] CIFAR-10 Testing
+- [ ] Consistency Training (Continuous)
 - [ ] Consistency Distillation
 
 # License and Acknowledgments
